@@ -35,5 +35,5 @@ jobs:
 
     - name: Build + push Docker image
       run: |
-        docker build -t {{ secrets.DOCKER_USERNAME }}/ci-cd-practice:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/ci-cd-practice:latest .
         docker push ${{ secrets.DOCKER_USERNAME }}/ci-cd-practice:latest
